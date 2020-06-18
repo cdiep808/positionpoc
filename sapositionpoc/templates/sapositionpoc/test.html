@@ -1,0 +1,21 @@
+<h1>Hello World</h1>
+{{ request.user }}
+
+<p>
+{{ my_text }} {{ my_number }} {{ my_list }}
+</p>
+<ul>
+  <li>Item1</li>
+  <li>Item2</li>
+  <li>Item3</li>
+</ul>
+
+<ul>
+{% for abc in my_list %}
+  {% if abc == 123 %}
+      <li> {{ forloop.counter }} - {{ abc|add:22 }}</li>
+    {% else %}
+      <li> {{ forloop.counter }} - {{ abc }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
